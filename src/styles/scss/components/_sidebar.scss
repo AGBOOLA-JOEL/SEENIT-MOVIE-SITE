@@ -1,0 +1,51 @@
+& .sidebar {
+  width: 90%;
+  color: $light-text;
+  height: 99%;
+  border-radius: 4px;
+  @include position(center, space-between, column);
+  display: flex;
+  @include transparent-white();
+
+  & .sidebar_logo {
+    margin-top: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    background-color: black;
+    height: 45px;
+    width: 45px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+
+  & .sidebar_nav {
+    @include flex(column);
+    gap: 30px;
+
+    & .sidebar_navicon {
+      color: $secondary;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+
+  & .sidebar_setting {
+    @include flex(column);
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+    & .sidebar_settingicon {
+      color: $secondary;
+      transition: 0.3s ease-in-out;
+      &:hover {
+        color: $dark;
+      }
+    }
+  }
+}

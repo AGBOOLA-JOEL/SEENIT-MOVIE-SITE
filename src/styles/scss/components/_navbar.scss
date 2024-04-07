@@ -1,0 +1,169 @@
+& .navbar {
+  width: 100%;
+  height: 90px;
+  @include position(center, space-between, row);
+  display: flex;
+  padding-top: 0px;
+
+  //   @include transparent-white();
+  //   background-color: blue;
+  & .navbar_search {
+    @include flex(row);
+    align-items: center;
+    height: 50px;
+    gap: 5px;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-right: 5px;
+    @include transparent-white();
+    & .navbar_searchicon {
+      color: $primary;
+      margin-top: 5px;
+    }
+    & .navbar_searchinput {
+      & input {
+        height: 40px;
+        border: none;
+        outline: none;
+        background: none;
+        color: $secondary;
+      }
+    }
+  }
+
+  & .navbar_link {
+    @include flex(row);
+    gap: 20px;
+    & .navbar_linkname {
+      font-weight: 500;
+      color: $light-text;
+      @include position(center, center, row);
+      cursor: pointer;
+      border-radius: 10px;
+      height: 50px;
+      padding-left: 15px;
+      padding-right: 15px;
+      background: none;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        color: black;
+        @include transparent-white();
+        // @include transparent-white();
+        // height:
+      }
+    }
+  }
+
+  & .navbar_auth {
+    @include position(center, space-between, row);
+    margin-right: 30px;
+
+    & .navbar_authinfo {
+      @include flex(row);
+
+      align-items: center;
+      gap: 20px;
+      & .navbar_notif {
+        @include transparent-white();
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        color: $secondary;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        @include position(center, center, column);
+        & span {
+          cursor: pointer;
+          display: grid;
+          place-items: center;
+          position: absolute;
+          color: white;
+          height: 14px;
+          width: 14px;
+          background-color: rgb(122, 40, 40);
+          font-size: 9px;
+          border-radius: 50%;
+          margin-left: 32px;
+          margin-top: -41px;
+        }
+        &:hover {
+          background-color: white;
+          color: $dark;
+        }
+      }
+      & .navbar_user {
+        @include position(center, space-around, row);
+        @include transparent-white();
+        overflow: hidden;
+        border-radius: 4px;
+        height: 50px;
+        width: 220px;
+        & .navbar_avi {
+          @include transparent-white();
+          color: white;
+          background-color: black;
+          @include position(center, center, row);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: -20px;
+        }
+        & .navbar_username {
+          height: 100%;
+          color: $light-text;
+          @include flex(column);
+          justify-content: space-between;
+          gap: 0px;
+          margin-left: 10px;
+          & :nth-child(1) {
+            font-size: 17px;
+            margin-top: 7px;
+            margin-bottom: -13px;
+            font-weight: 500;
+            color: $secondary;
+          }
+
+          & :nth-child(2) {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgb(161, 161, 161);
+          }
+        }
+      }
+    }
+    & .navbar_authlink {
+      @include position(center, space-between, row);
+      gap: 20px;
+      & :nth-child(1) {
+        @include transparent-white();
+        color: $secondary;
+        font-size: 20px;
+        height: 50px;
+        border-radius: 4px;
+        width: 120px;
+        border: none;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          color: $dark;
+        }
+      }
+      & :nth-child(2) {
+        background-color: $dark;
+        color: $secondary;
+        font-size: 20px;
+        height: 50px;
+        border-radius: 4px;
+        width: 120px;
+        border: none;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          color: $dark;
+        }
+      }
+    }
+  }
+}

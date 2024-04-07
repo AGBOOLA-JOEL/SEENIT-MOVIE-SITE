@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight:wght@300&display=swap");
+
+@import "./scss/scssComponents/variables";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  overflow-x: hidden;
+
+  background-color: $primary;
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+
+  & .app_container {
+    height: 100%;
+    width: 100%;
+    @include flex(row);
+
+    & .app_sidebar {
+      @include position(center, center, column);
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+      position: fixed;
+      width: 80px;
+    }
+    & .app_main {
+      @include flex(column);
+
+      width: 100%;
+      margin-left: 110px;
+    }
+  }
+  // components
+  @import "./scss/components/navbar";
+  @import "./scss/components/sidebar";
+  //   @import "./scss/components/auth";
+  //   @import "./scss/components/generator";
+
+  // pages
+  //   @import "./scss/pages/home";
+  @import "./scss/pages/homepage";
+  //   @import "./scss/pages/generate-password";
+}

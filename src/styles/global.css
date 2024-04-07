@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Inter+Tight:wght@300&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  overflow-x: hidden;
+  background-color: #2b2b2b;
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+}
+.app .app_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.app .app_container .app_sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  width: 80px;
+}
+.app .app_container .app_main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 110px;
+}
+.app .navbar {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  padding-top: 0px;
+}
+.app .navbar .navbar_search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  gap: 5px;
+  border-radius: 4px;
+  padding-left: 10px;
+  padding-right: 5px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.app .navbar .navbar_search .navbar_searchicon {
+  color: #2b2b2b;
+  margin-top: 5px;
+}
+.app .navbar .navbar_search .navbar_searchinput input {
+  height: 40px;
+  border: none;
+  outline: none;
+  background: none;
+  color: rgb(243, 234, 234);
+}
+.app .navbar .navbar_link {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.app .navbar .navbar_link .navbar_linkname {
+  font-weight: 500;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: none;
+  transition: 0.5s ease-in-out;
+}
+.app .navbar .navbar_link .navbar_linkname:hover {
+  color: black;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.app .navbar .navbar_auth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-right: 30px;
+}
+.app .navbar .navbar_auth .navbar_authinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_notif {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  color: rgb(243, 234, 234);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_notif span {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  color: white;
+  height: 14px;
+  width: 14px;
+  background-color: rgb(122, 40, 40);
+  font-size: 9px;
+  border-radius: 50%;
+  margin-left: 32px;
+  margin-top: -41px;
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_notif:hover {
+  background-color: white;
+  color: black;
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_user {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+  border-radius: 4px;
+  height: 50px;
+  width: 220px;
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_user .navbar_avi {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: white;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: -20px;
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_user .navbar_username {
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0px;
+  margin-left: 10px;
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_user .navbar_username :nth-child(1) {
+  font-size: 17px;
+  margin-top: 7px;
+  margin-bottom: -13px;
+  font-weight: 500;
+  color: rgb(243, 234, 234);
+}
+.app .navbar .navbar_auth .navbar_authinfo .navbar_user .navbar_username :nth-child(2) {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(161, 161, 161);
+}
+.app .navbar .navbar_auth .navbar_authlink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+}
+.app .navbar .navbar_auth .navbar_authlink :nth-child(1) {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: rgb(243, 234, 234);
+  font-size: 20px;
+  height: 50px;
+  border-radius: 4px;
+  width: 120px;
+  border: none;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.app .navbar .navbar_auth .navbar_authlink :nth-child(1):hover {
+  background-color: white;
+  color: black;
+}
+.app .navbar .navbar_auth .navbar_authlink :nth-child(2) {
+  background-color: black;
+  color: rgb(243, 234, 234);
+  font-size: 20px;
+  height: 50px;
+  border-radius: 4px;
+  width: 120px;
+  border: none;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.app .navbar .navbar_auth .navbar_authlink :nth-child(2):hover {
+  background-color: white;
+  color: black;
+}
+.app .sidebar {
+  width: 90%;
+  color: white;
+  height: 99%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  display: flex;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.app .sidebar .sidebar_logo {
+  margin-top: 15px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  background-color: black;
+  height: 45px;
+  width: 45px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.app .sidebar .sidebar_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.app .sidebar .sidebar_nav .sidebar_navicon {
+  color: rgb(243, 234, 234);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.app .sidebar .sidebar_nav .sidebar_navicon:hover {
+  color: black;
+}
+.app .sidebar .sidebar_setting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.app .sidebar .sidebar_setting .sidebar_settingicon {
+  color: rgb(243, 234, 234);
+  transition: 0.3s ease-in-out;
+}
+.app .sidebar .sidebar_setting .sidebar_settingicon:hover {
+  color: black;
+}
+.app .pages {
+  color: blue;
+  font-size: 100px;
+}/*# sourceMappingURL=global.css.map */
