@@ -4,11 +4,26 @@ import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { FaChevronDown } from "react-icons/fa";
-
+import { login, logout } from "@/redux/features/auth-slice";
+import { useDispatch } from "react-redux";
+import { AppDispatch, useAppSelector } from "@/redux/store";
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  // const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true);
+  // const [username, setUsername] = useState<string>("");
+
+  const dispatch = useDispatch<AppDispatch>();
+  const handleLogin = () => {
+    dispatch(login("custom username"));
+  };
+  const handleLogout = () => {
+    dispatch(logout());
+  };
+
+  const isAuth = useAppSelector((state) => state.authReducer.value.isAuth);
   return (
     <div className="navbar">
+      {isAuth === false ? <div className="navbar_logo">SI</div> : <></>}
+
       <div className="navbar_search">
         <div className="navbar_searchicon">
           <FaSearch />
@@ -25,7 +40,7 @@ const Navbar = () => {
         <div className="navbar_linkname">Discover</div>
       </div>
       <div className="navbar_auth">
-        {isLoggedIn ? (
+        {isAuth === true ? (
           <div className="navbar_authinfo">
             <div className="navbar_notif">
               <span>6</span>
@@ -44,8 +59,13 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="navbar_authlink">
-            <button>Login</button>
-            <button>SignUp</button>
+            <button onClick={handleLogin}>Login</button>
+            {/* <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            /> */}
+            <button onClick={handleLogout}>SignUp</button>
           </div>
         )}
       </div>

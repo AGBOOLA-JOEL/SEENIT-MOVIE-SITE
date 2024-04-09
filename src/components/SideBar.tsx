@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { IoSettingsOutline } from "react-icons/io5";
 import { TbHome } from "react-icons/tb";
 import { MdOutlineLiveTv } from "react-icons/md";
