@@ -22,7 +22,7 @@ const Navbar = () => {
   const isAuth = useAppSelector((state) => state.authReducer.value.isAuth);
   return (
     <div className="navbar">
-      {isAuth === false ? <div className="navbar_logo">SI</div> : <></>}
+      {!isAuth && <div className="navbar_logo">SI</div>}
 
       <div className="navbar_search">
         <div className="navbar_searchicon">
@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="navbar_linkname">Discover</div>
       </div>
       <div className="navbar_auth">
-        {isAuth === true ? (
+        {isAuth ? (
           <div className="navbar_authinfo">
             <div className="navbar_notif">
               <span>6</span>
