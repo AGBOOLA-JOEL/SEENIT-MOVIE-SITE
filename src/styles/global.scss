@@ -35,15 +35,26 @@ a {
       @include position(center, center, column);
       display: flex;
       height: 100vh;
-      overflow: hidden;
-      position: sticky;
+      // overflow: hidden;
+      // position: sticky;
+      background-color: red;
       width: 80px;
     }
     & .app_main {
       @include flex(column);
+      background-color: blue;
       width: 100%;
+
       margin-left: 30px;
       margin-right: 30px;
+      height: 1200px;
+      & .app_navbar {
+        width: 100%;
+        background-color: yellow;
+         
+      }
+      & .app_children {
+      }
     }
   }
   // components

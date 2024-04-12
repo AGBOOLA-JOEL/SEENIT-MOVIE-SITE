@@ -1,10 +1,10 @@
 & .sidebar {
-  width: 90%;
+  width: 80px;
   color: $light-text;
   height: 99%;
   border-radius: 4px;
   @include position(center, space-between, column);
-  display: flex;
+  position: fixed;
   @include transparent-white();
 
   & .sidebar_logo {

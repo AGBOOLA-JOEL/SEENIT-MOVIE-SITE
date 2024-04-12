@@ -16,8 +16,11 @@ const App = ({ children }: { children: React.ReactNode }) => {
             </div>
           )}
           <div className="app_main">
-            <Navbar />
-            {children}
+            <div className="app_navbar">
+              <Navbar />
+            </div>
+
+            <div className="app_children">{children}</div>
           </div>
         </div>
       </body>

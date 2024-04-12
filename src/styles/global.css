@@ -35,16 +35,21 @@ a {
   flex-direction: column;
   display: flex;
   height: 100vh;
-  overflow: hidden;
-  position: sticky;
+  background-color: red;
   width: 80px;
 }
 .app .app_container .app_main {
   display: flex;
   flex-direction: column;
+  background-color: blue;
   width: 100%;
   margin-left: 30px;
   margin-right: 30px;
+  height: 1200px;
+}
+.app .app_container .app_main .app_navbar {
+  width: 100%;
+  background-color: yellow;
 }
 .app .navbar {
   width: 100%;
@@ -257,7 +262,7 @@ a {
   color: black;
 }
 .app .sidebar {
-  width: 90%;
+  width: 80px;
   color: white;
   height: 99%;
   border-radius: 4px;
@@ -265,7 +270,7 @@ a {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  display: flex;
+  position: fixed;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
