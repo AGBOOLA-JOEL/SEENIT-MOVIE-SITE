@@ -2,7 +2,14 @@ $login-background: white;
 $login-width: 100%;
 $login-height: 100vh;
 $credentials-width: 100%;
-.pages {
+& .homepage {
   color: blue;
   font-size: 100px;
+  background-color: red;
+  & .homepage_info {
+    
+  }
+
+  & .homepage_login {
+  }
 }

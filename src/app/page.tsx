@@ -9,7 +9,12 @@ export default function Home() {
   const username = useAppSelector((state) => state.authReducer.value.userName);
   return (
     <div>
-      <p className="pages">pagesss -  username:{username}</p>
+      <p className="homepage">pagesss - username:{username}</p>
+      <div className="homepage_info">
+        <div></div>
+        <div></div>
+      </div>
+      <div className="homepage_login"></div>
     </div>
   );
 }
