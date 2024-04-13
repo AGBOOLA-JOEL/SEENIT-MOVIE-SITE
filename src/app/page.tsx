@@ -1,6 +1,7 @@
 "use client";
 
 import { useAppSelector } from "@/redux/store";
+import Image from "next/image";
 
 import React from "react";
 // import { HomeImage } from "./assets/images/homepageimage.png";
@@ -13,7 +14,15 @@ export default function Home() {
     <div className="homepage">
       {/* <p className="homepage">pagesss - username:{username}</p> */}
       <div className="homepage_info">
-        <div className="homepage_infoimage">ssssss</div>
+        <div className="homepage_infoimage">
+          ssssss
+          <Image
+            src="/public/assets/images/homepageimage.png"
+            alt="image"
+            width={100}
+            height={100}
+          />
+        </div>
         <div></div>
       </div>
       <div className="homepage_login"></div>

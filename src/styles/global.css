@@ -328,19 +328,18 @@ a {
   height: 800px;
   margin-top: -40px;
   position: relative;
+  background-blend-mode: multiply;
 }
 .app .homepage .homepage_info .homepage_infoimage {
-  background-image: url("/assets/images/homepageimage.png");
-  width: 80%;
+  width: 100%;
   height: 700px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   position: absolute;
-  background-color: red;
-  background-blend-mode: thicker;
-}
-.app .homepage .homepage_info .homepage_infoimage img {
-  width: 100%;
-  height: 100%;
+  border-radius: 16px;
 }/*# sourceMappingURL=global.css.map */
