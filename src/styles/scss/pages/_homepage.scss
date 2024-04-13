@@ -5,9 +5,30 @@ $credentials-width: 100%;
 & .homepage {
   color: blue;
   font-size: 100px;
-  background-color: red;
+  width: 100%;
+  // background-color: red;
   & .homepage_info {
-    
+    @include position(center, center, row);
+    width: 100%;
+    background-color: $primary;
+    height: 800px;
+    margin-top: -40px;
+    position: relative;
+    & .homepage_infoimage {
+      background-image: url("/assets/images/homepageimage.png");
+      width: 80%;
+      height: 700px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      position: absolute;
+      background-color: red;
+      background-blend-mode: thicker;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 
   & .homepage_login {

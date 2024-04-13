@@ -48,6 +48,9 @@ a {
       height: 1200px;
       & .app_navbar {
         width: 100%;
+        z-index: 10000000;
+        // margin-left: 30px;
+        // margin-right: 30px;
       }
       & .app_children {
       }
