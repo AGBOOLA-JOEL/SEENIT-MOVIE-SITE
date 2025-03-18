@@ -1,65 +1,56 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap");
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
+/* Layout styles */
 .app {
   overflow-x: hidden;
   font-family: Assistant;
   background-color: #2b2b2b;
-  padding: 0px;
-  margin: 0px;
-  top: 0px;
-  left: 0px;
-  height: 100vh;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
   width: 100%;
 }
-.app .app_container {
+
+.app_container {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-.app .app_container .app_sidebar {
+
+.app_sidebar {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  display: flex;
   height: 100vh;
   overflow: hidden;
   width: 80px;
 }
-.app .app_container .app_main {
+
+.app_main {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin-left: 30px;
   margin-right: 30px;
-  height: 1200px;
+  min-height: 100vh;
 }
-.app .app_container .app_main .app_navbar {
-  width: 100%;
-  z-index: 10000000;
-}
-.app .navbar {
+
+/* Navbar styles */
+.navbar {
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  display: flex;
-  padding-top: 0px;
+  padding: 0 20px;
+  background-color: #2b2b2b;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
-.app .navbar .navbar_logo {
+
+.navbar_logo {
   display: grid;
   place-items: center;
   font-size: 25px;
@@ -70,7 +61,8 @@ a {
   border-radius: 4px;
   font-weight: 500;
 }
-.app .navbar .navbar_search {
+
+.navbar_search {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -84,23 +76,27 @@ a {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-.app .navbar .navbar_search .navbar_searchicon {
+
+.navbar_searchicon {
   color: #2b2b2b;
   margin-top: 5px;
 }
-.app .navbar .navbar_search .navbar_searchinput input {
+
+.navbar_searchinput input {
   height: 40px;
   border: none;
   outline: none;
   background: none;
   color: rgb(243, 234, 234);
 }
-.app .navbar .navbar_link {
+
+.navbar_link {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
-.app .navbar .navbar_link .navbar_linkname {
+
+.navbar_linkname {
   font-weight: 500;
   color: white;
   display: flex;
@@ -115,26 +111,30 @@ a {
   background: none;
   transition: 0.5s ease-in-out;
 }
-.app .navbar .navbar_link .navbar_linkname:hover {
+
+.navbar_linkname:hover {
   color: black;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-.app .navbar .navbar_auth {
+
+.navbar_auth {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
 }
-.app .navbar .navbar_auth .navbar_authinfo {
+
+.navbar_authinfo {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
 }
-.app .navbar .navbar_auth .navbar_authinfo .navbar_notif {
+
+.navbar_notif {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -149,8 +149,10 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  position: relative;
 }
-.app .navbar .navbar_auth .navbar_authinfo .navbar_notif span {
+
+.navbar_notif span {
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -164,11 +166,13 @@ a {
   margin-left: 32px;
   margin-top: -41px;
 }
-.app .navbar .navbar_auth .navbar_authinfo .navbar_notif:hover {
+
+.navbar_notif:hover {
   background-color: white;
   color: black;
 }
-.app .navbar .navbar_auth .navbar_authinfo .navbar_user {
+
+.navbar_user {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -182,7 +186,8 @@ a {
   height: 50px;
   width: 220px;
 }
-.app .navbar .navbar_auth .navbar_authinfo .navbar_user .navbar_avi {
+
+.navbar_avi {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -198,7 +203,8 @@ a {
   border-radius: 50%;
   margin-right: -20px;
 }
-.app .navbar .navbar_auth .navbar_authinfo .navbar_user .navbar_username {
+
+.navbar_username {
   height: 100%;
   color: white;
   display: flex;
@@ -207,38 +213,30 @@ a {
   gap: 0px;
   margin-left: 10px;
 }
-.app
-  .navbar
-  .navbar_auth
-  .navbar_authinfo
-  .navbar_user
-  .navbar_username
-  :nth-child(1) {
+
+.navbar_username :nth-child(1) {
   font-size: 17px;
   margin-top: 7px;
   margin-bottom: -13px;
   font-weight: 500;
   color: rgb(243, 234, 234);
 }
-.app
-  .navbar
-  .navbar_auth
-  .navbar_authinfo
-  .navbar_user
-  .navbar_username
-  :nth-child(2) {
+
+.navbar_username :nth-child(2) {
   font-size: 13px;
   font-weight: 500;
   color: rgb(161, 161, 161);
 }
-.app .navbar .navbar_auth .navbar_authlink {
+
+.navbar_authlink {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   gap: 20px;
 }
-.app .navbar .navbar_auth .navbar_authlink :nth-child(1) {
+
+.navbar_authlink button {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -252,125 +250,82 @@ a {
   transition: 0.5s ease-in-out;
   cursor: pointer;
 }
-.app .navbar .navbar_auth .navbar_authlink :nth-child(1):hover {
+
+.navbar_authlink button:hover {
   background-color: white;
   color: black;
 }
-.app .navbar .navbar_auth .navbar_authlink :nth-child(2) {
-  background-color: black;
-  color: rgb(243, 234, 234);
-  font-size: 20px;
-  height: 50px;
-  border-radius: 4px;
-  width: 120px;
-  border: none;
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-}
-.app .navbar .navbar_auth .navbar_authlink :nth-child(2):hover {
-  background-color: white;
-  color: black;
-}
-.app .sidebar {
-  width: 80px;
-  color: white;
-  height: 99%;
-  border-radius: 4px;
+
+/* Sidebar styles */
+.sidebar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  position: fixed;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  height: 100%;
+  width: 100%;
+  background-color: #2b2b2b;
+  padding: 20px 0;
 }
-.app .sidebar .sidebar_logo {
-  margin-top: 15px;
+
+.sidebar_logo {
   display: grid;
   place-items: center;
   font-size: 25px;
   background-color: black;
-  height: 45px;
-  width: 45px;
+  color: white;
+  height: 50px;
+  width: 50px;
   border-radius: 4px;
   font-weight: 500;
 }
-.app .sidebar .sidebar_nav {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.app .sidebar .sidebar_nav .sidebar_navicon {
-  color: rgb(243, 234, 234);
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-.app .sidebar .sidebar_nav .sidebar_navicon:hover {
-  color: black;
-}
-.app .sidebar .sidebar_setting {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-.app .sidebar .sidebar_setting .sidebar_settingicon {
-  color: rgb(243, 234, 234);
-  transition: 0.3s ease-in-out;
-}
-.app .sidebar .sidebar_setting .sidebar_settingicon:hover {
-  color: black;
-}
-.app .homepage {
-  color: blue;
-  font-size: 100px;
-  width: 100%;
-}
-.app .homepage .homepage_info {
+
+.sidebar_nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  width: 100%;
-  background-color: #2b2b2b;
-  height: 700px;
-  margin-top: 10px;
-  border-radius: 8px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar_navicon {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sidebar_navicon:hover {
+  color: black;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-.app .homepage .homepage_info .homepage_infowrapper {
-  width: 95%;
+
+.sidebar_setting {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 20px;
 }
-.app .homepage .homepage_info .homepage_infowrapper .homepage_infoimage {
-  width: 100%;
-  height: 700px;
-  gap: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  border-radius: 16px;
+
+.sidebar_settingicon {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  padding: 10px;
+  border-radius: 4px;
 }
-.app
-  .homepage
-  .homepage_info
-  .homepage_infowrapper
-  .homepage_infoimage
-  .homepage_infotext {
-  width: 40%;
-  height: 90%;
-  border-radius: 8px;
-  background-color: white;
-  border-radius: 16px;
-} /*# sourceMappingURL=global.css.map */
+
+.sidebar_settingicon:hover {
+  color: black;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
